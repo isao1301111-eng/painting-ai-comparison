@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>塗装の仕事でAI4社を比べた結果</title>
+<style>
+:root{--ink:#1f1f1f;--muted:#5f5f66;--line:#d9d9de;--gold:#9a7a12;--gold-bg:#faf5e4;--bg:#ffffff}
+*{box-sizing:border-box}
+body{margin:0;background:#ececec;color:var(--ink);font-family:"Hiragino Sans","Yu Gothic UI","Noto Sans JP",sans-serif;font-size:12.5px;line-height:1.6}
+.page{background:var(--bg);width:210mm;min-height:297mm;margin:16px auto;padding:11mm 13mm 8mm}
+h1{font-size:21px;margin:0;color:var(--ink)}
+.sub{color:var(--muted);margin:2px 0 10px;font-size:12px}
+h2{font-size:14px;margin:12px 0 5px;padding-left:8px;border-left:4px solid var(--gold)}
+.bluf{background:var(--gold-bg);border:1px solid #e8dcb0;border-radius:6px;padding:8px 12px}
+.bluf p{margin:0}
+.bluf b{color:var(--gold)}
+table{border-collapse:collapse;width:100%;font-size:12px}
+th,td{border:1px solid var(--line);padding:4px 6px;text-align:center}
+th{background:#f4f4f6;font-weight:600}
+td.l,th.l{text-align:left}
+.hi{background:var(--gold-bg);font-weight:700}
+ul{margin:3px 0;padding-left:1.2em}
+li{margin:2px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.note{color:var(--muted);font-size:11px}
+footer{margin-top:10px;padding-top:6px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+@media print{body{background:#fff}.page{margin:0;width:auto;min-height:auto;padding:10mm 12mm}@page{size:A4;margin:0}}
+@media (max-width:820px){.page{width:auto;min-height:auto;margin:0;padding:16px}.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>塗装の仕事でAI4社を比べた結果</h1>
+  <p class="sub">第1回：提案書の骨子編 ／ Claude・ChatGPT・Grok・Gemini（各社の無料チャット）／ 2026年10月30〜31日</p>
+
+  <div class="bluf"><p><b>結論：</b>この仕事では、<b>点数の差より「回ごとのぶれ」のほうが大きかった</b>。安定していたのはChatGPT（2回とも4点）。Claudeは3点→5点、Grokは2点→4点と回によって大きく変わった。<b>AIを1回試しただけで「どれが一番」とは決められない</b>。仕事に使う前に、同じ指示で2〜3回試すべき。</p></div>
+
+  <h2>試した仕事と方法</h2>
+  <ul>
+    <li><b>指示：</b>従業員10名の塗装会社に、日報と見積の手作業を減らすAI導入を提案する。A4 1枚の見出しと要点（各2〜3行）。費用の数字は書かず「要見積」とする。</li>
+    <li><b>方法：</b>4社の無料チャットに同じ指示を新しい会話で送り、答えを自作の「AI適性比較ツール」で採点。これを2回くり返した。</li>
+    <li><b>採点の基準（5項目）：</b>①課題→解決策→効果→進め方→費用の流れ ②塗装現場の実情に合う ③費用を作らず要見積 ④A4 1枚に収まる ⑤効果を大げさに言い切らない</li>
+  </ul>
+
+  <h2>結果（5点満点）</h2>
+  <table>
+    <thead><tr><th class="l">AI（無料チャット）</th><th>1回目</th><th>2回目</th><th>平均</th><th>ぶれ</th></tr></thead>
+    <tbody>
+      <tr><td class="l">ChatGPT</td><td>4</td><td>4</td><td class="hi">4.0</td><td>なし</td></tr>
+      <tr><td class="l">Claude</td><td>3</td><td>5</td><td class="hi">4.0</td><td>大（2点差）</td></tr>
+      <tr><td class="l">Gemini</td><td>4</td><td>3</td><td>3.5</td><td>小（1点差）</td></tr>
+      <tr><td class="l">Grok</td><td>2</td><td>4</td><td>3.0</td><td>大（2点差）</td></tr>
+    </tbody>
+  </table>
+  <p class="note">1回目は本人が採点。2回目はClaude（Claude Code）が採点基準に沿って採点し、項目ごとの判定と理由を記録した。2回目の採点者がClaudeのため、Claudeの点が甘くなっている可能性がある。</p>
+
+  <h2>2回目の答えで差が出たポイント</h2>
+  <table>
+    <thead><tr><th class="l">AI</th><th>①流れ</th><th>②現場の実情</th><th>③要見積</th><th>④A4 1枚</th><th>⑤言い切らない</th><th class="l">ひとこと</th></tr></thead>
+    <tbody>
+      <tr><td class="l">Claude（5）</td><td>○</td><td>○</td><td>○</td><td>○</td><td>◎</td><td class="l">効果は「導入前後で測る」「目標は試験後に決める」。ただし本文の後に不要な解説あり</td></tr>
+      <tr><td class="l">Grok（4）</td><td>○</td><td>◎</td><td>○</td><td>△</td><td>○</td><td class="l">現場の具体性は一番（人工・下地処理・塗回数・元請）。長すぎて2〜3行を超える</td></tr>
+      <tr><td class="l">ChatGPT（4）</td><td>○</td><td>△</td><td>○</td><td>○</td><td>○</td><td class="l">形はきれい。中身はどの業種にも当てはまる一般論寄り</td></tr>
+      <tr><td class="l">Gemini（3）</td><td>○</td><td>△</td><td>○</td><td>○</td><td>×</td><td class="l">「大幅に削減」「数分で」「正確な見積」と根拠なく言い切る</td></tr>
+    </tbody>
+  </table>
+
+  <div class="cols">
+    <div>
+      <h2>わかったこと</h2>
+      <ul>
+        <li><b>4社とも「要見積」は守れた。</b>費用の数字を勝手に作る失敗はなかった。</li>
+        <li><b>差が出るのは「現場の具体性」と「言い切らないか」。</b>提案書でお客様の信用を失うのは後者。</li>
+        <li><b>同じAIでも回によって2点変わる。</b>1回の答えで判断せず、良い答えを選ぶ・直す人の目が要る。</li>
+        <li>AIの答えは「下書き」。<b>現場を知っている人が確認して初めて使える</b>（Grokの長さ、Geminiの言い切りは、塗装の現場を知らないと見落とす）。</li>
+      </ul>
+    </div>
+    <div>
+      <h2>この結果の限界</h2>
+      <ul>
+        <li>試した仕事は<b>1つ・各2回だけ</b>。他の仕事では順位が変わりうる。</li>
+        <li><b>無料プラン</b>での結果。有料の上位モデルの実力ではない。</li>
+        <li>採点者は1回目が本人、2回目がClaude。採点する人によって点は変わる。</li>
+        <li>AIは毎月更新されるので、<b>2026年10月末時点</b>の結果。</li>
+      </ul>
+      <h2>次に試す仕事</h2>
+      <p style="margin:0">塗料の数量計算（正解が決まっている）／見積の項目整理／施主へのLINE連絡</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>松本 勲（建築塗装27年 × AI）／ 個人事業「愛andAI」</span>
+    <span>比較に使ったツール：AI適性比較ツール（自作）</span>
+  </footer>
+</div>
+</body>
+</html>
